@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>form2</title>
+        <!--md5工具类-->
+        <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.16.0/js/md5.min.js"></script>
+    </head>
+    <body>
+        <form action="#" method="post">
+            <p>
+                <span>username:</span><input type="text" id="username" name="username">
+            </p>
+            <p>
+                <span>password</span><input type="password" id="password">
+            </p>
+            <input type="hidden" id="md5pwd" name="password">
+            <!--<input type="submit">-->
+            <button type="submit" onclick="aaa()">submit</button>
+        </form>
+
+        <script>
+            function aaa() {
+                let name = document.getElementById('username');
+                let pwd = document.getElementById('password');
+                let md5pwd = document.getElementById('md5pwd');
+                // md5算法
+                md5pwd.value = md5(pwd.value);
+                console.log(pwd.value);
+            }
+        </script>
+    </body>
+</html>

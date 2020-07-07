@@ -1,0 +1,21 @@
+{
+  "name": "weiming",
+  "url": "https://www.baidu.com",
+  "page": 1,
+  "isNonProfit": true,
+  "address": {
+    "street": "含光门",
+    "city": "陕西西安",
+    "country": "中国"
+  },
+  "links": [
+    {
+      "name": "taobao",
+      "url": "https://www.taobao.com"
+    },
+    {
+      "name": "bilibili",
+      "url": "https://www.bilibili.com"
+    }
+  ]
+}

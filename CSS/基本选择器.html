@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>标签选择器</title>
+        <style>
+            /*基本选择器优先级：
+            不遵循就近原则
+            ID选择器>类选择器>标签选择器
+            */
+            /*标签选择器：选择页面上所有这个标签的元素*/
+            h1{
+                color: #8e7b45;
+            }
+            /*类选择器：.class的名称{}
+            好处，可以多个标签归类，是同一个class，可以复用
+            */
+            .wm{
+                color: green;
+            }
+            /*id选择器:ID必须保证全局唯一！
+            #ID名称{}
+            */
+            #wm{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>学Java</h1>
+        <h1 class="wm" id="wm">学Java2</h1>
+        <h1 class="wm">学Java3</h1>
+        <p class="wm">狂神说</p>
+    </body>
+</html>

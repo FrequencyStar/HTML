@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>demo1</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="appif">
+            <p v-if="seen==='a'">a</p>
+            <p v-else-if="seen==='b'">b</p>
+            <p v-else>nothing</p>
+        </div>
+        <script>
+            let vmif = new Vue({
+                el: "#appif",
+                data: {
+                    seen: "a"
+                }
+            })
+        </script>
+    </body>
+</html>

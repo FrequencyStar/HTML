@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>axios</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{info.name}}</p>
+            <a v-bind:href="info.url">Baidu</a>
+        </div>
+        <script>
+            let vm = new Vue({
+                el: "#app",
+                data() {
+                    return {
+                        info: {
+                            name: null,
+                            url: null,
+                            page: null,
+                            isNonProfit: null,
+                            address: null,
+                            links: null
+                        }
+                    }
+                },
+                mounted() {
+                    axios.get('./json/axios.json').then(response=>(this.info=response.data));
+                }
+            })
+        </script>
+    </body>
+</html>

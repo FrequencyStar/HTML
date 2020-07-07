@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jquery</title>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            #divmove{
+                width: 500px;
+                height: 500px;
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="ul">
+            <li id="li1"></li>
+            <li name="li2"></li>
+        </ul>
+        <p>mouse: <span id="mouse"></span></p>
+        <div id="divmove">
+            在这里移动鼠标
+        </div>
+
+        <script>
+            // 当网页元素加载完之后，响应操作
+            $(function () {
+                $('#divmove').mousemove(function (e) {
+                    $('#mouse').text('x:'+e.pageX+'y:'+e.pageY);
+                })
+            })
+            $('#ul li[name]').text("java");// 获得值
+            $('#ul li[name]').text();// 设置值
+            $('#ul li[name]').html();// 获得值
+            $('#ul li[name]').html('<strong>11</strong>');// 设置值
+            $('#ul li[name]').css('color','red');
+            $('#ul li[name]').hide("slow");
+
+        </script>
+    </body>
+</html>
